@@ -8,6 +8,12 @@ var map = new ol.Map({
     })
 });
 
+//scale bar (imperial units)
+var scaleLineControl = new ol.control.ScaleLine({
+    units: 'imperial'
+});
+map.addControl(scaleLineControl);
+
 //initial view - epsg:3857 coordinates if not "Match project CRS"
 map.getView().fit([-13759174.411372, 4426719.785240, -13410649.647527, 4649675.749828], map.getSize());
 
